@@ -17,7 +17,7 @@ public class VerificacaoServico {
         boolean contratado = false;
        
         //TODO: Verifica se o Cliente está Cadastrado.
-        if(User.username(nomeCliente) != null){
+        if(username(nomeCliente) != null){
             // TODO: Verifique se o serviço está na lista de serviços contratados
             for(int i = 0; i < partes.length; i++){           
                 if(partes[i].equals(servico)){
@@ -34,6 +34,14 @@ public class VerificacaoServico {
             System.out.println("Usuario não Cadastrado.");
         }
         scanner.close();
+    }
+    public static String username(String cliente){
+        String[] usuario = {"Alice", "Bob", "Carol"};
+        for(int i = 0; i < usuario.length; i++){
+            if(usuario[i].equals(cliente))
+            return usuario[i];
+        }
+        return null;
     }
 }   
  
