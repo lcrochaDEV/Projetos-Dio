@@ -18,6 +18,25 @@ public class Main {
 		emprestimo.emprestimo(1000, cc);
 		emprestimo.imprimirExtrato();
 		cc.imprimirExtrato();
+	//------------------------------------------------//
+
+		Cliente Lucas = new Cliente();
+		Lucas.setNome("Lucas");
+		
+		Conta cc01 = new ContaCorrente(Lucas);
+		Conta poupanca01 = new ContaPoupanca(Lucas);
+
+		cc01.depositar(1000);
+		cc01.transferir(100, poupanca01);
+		
+		cc01.imprimirExtrato();
+		poupanca01.imprimirExtrato();
+
+		Emprestimo Ted = new Emprestimo(Lucas);
+		Ted.emprestimo(800, cc);
+		Ted.imprimirExtrato();
+		cc.imprimirExtrato();
+
 	}
 
 }
