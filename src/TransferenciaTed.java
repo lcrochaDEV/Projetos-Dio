@@ -1,8 +1,8 @@
-public class EmprestimoTed extends Conta {
+public class TransferenciaTed extends Conta {
     protected double emp;
 
     //dados da cont do cliente
-	public EmprestimoTed(Cliente cliente) {
+	public TransferenciaTed(Cliente cliente) {
         super(cliente);
     }
 
@@ -14,7 +14,7 @@ public class EmprestimoTed extends Conta {
     //+ soma do emprestimo
     @Override
 	public void imprimirExtrato() {
-        System.out.println("=== Extrato Emprestimo ===");
+        System.out.println("=== Transferência via TED ===");
 		System.out.println(String.format("Saldo: %.2f", this.emp));
 	}
 }
