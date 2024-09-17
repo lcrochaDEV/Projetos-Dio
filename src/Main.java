@@ -13,6 +13,11 @@ public class Main {
 		
 		cc.imprimirExtrato();
 		poupanca.imprimirExtrato();
+
+		Emprestimo emprestimo = new Emprestimo(venilton);
+		emprestimo.emprestimo(1000, cc);
+		emprestimo.imprimirExtrato();
+		cc.imprimirExtrato();
 	}
 
 }
