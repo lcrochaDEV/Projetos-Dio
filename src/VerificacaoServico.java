@@ -19,21 +19,22 @@ public class VerificacaoServico {
         //TODO: Verifica se o Cliente está Cadastrado.
         String[] usuario = {"Alice", "Bob", "Carol"};
         for(int i = 0; i < usuario.length; i++){
-        if(username(nomeCliente) != null){
-            // TODO: Verifique se o serviço está na lista de serviços contratados
-            for(int i = 0; i < partes.length; i++){           
-                if(partes[i].equals(servico)){
-                    System.out.println("Sim");
-                    contratado = true;
-                    break;
+            if(username(nomeCliente) != null){
+                // TODO: Verifique se o serviço está na lista de serviços contratados
+                for(int p = 0; p < partes.length; p++){           
+                    if(partes[p].equals(servico)){
+                        System.out.println("Sim");
+                        contratado = true;
+                        break;
+                    }
                 }
             }
             if(contratado == false){
                 System.out.println("Não");
                 System.exit(0);
+            }else{
+                System.out.println("Usuario não Cadastrado.");
             }
-        }else{
-            System.out.println("Usuario não Cadastrado.");
         }
         scanner.close();
     }
@@ -45,5 +46,6 @@ public class VerificacaoServico {
         }
         return null;
     }
+
 }   
  
