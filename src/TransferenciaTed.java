@@ -1,20 +1,22 @@
 public class TransferenciaTed extends Conta {
-    protected double emp;
+    protected double ted;
+    protected String beneficiadoName;
 
     //dados da cont do cliente
 	public TransferenciaTed(Cliente cliente) {
         super(cliente);
     }
 
-    public void emprestimo(double valor, IConta contaDestino){
-        emp = valor;
-        contaDestino.depositar(valor);     
+    public void ted(double valor, IConta contaDestino, String beneficiado){
+        ted = valor;
+        beneficiadoName = beneficiado;
+        contaDestino.depositar(valor);
     }    
     
-    //+ soma do emprestimo
+    //+ soma do tedrestimo
     @Override
 	public void imprimirExtrato() {
-        System.out.println("=== Transferência via TED ===");
-		System.out.println(String.format("Saldo: %.2f", this.emp));
+        System.out.println("=== Transferência via TED de " + cliente.getNome() + " para " + beneficiadoName + " ===");
+		System.out.println(String.format("Valor: %.2f", this.ted));
 	}
 }

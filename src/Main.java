@@ -14,6 +14,7 @@ public class Main {
 		cc.imprimirExtrato();
 		poupanca.imprimirExtrato();
 
+	//------------------EMPRESTIMO---------------------//
 		Emprestimo emprestimo = new Emprestimo(venilton);
 		emprestimo.emprestimo(1000, cc);
 		emprestimo.imprimirExtrato();
@@ -32,11 +33,11 @@ public class Main {
 		cc01.imprimirExtrato();
 		poupanca01.imprimirExtrato();
 
-		Emprestimo Ted = new Emprestimo(Lucas);
-		Ted.emprestimo(800, cc);
+	//------------------DEPOSITO-----------------------//
+		TransferenciaTed Ted = new TransferenciaTed(Lucas);
+		Ted.ted(800, cc, cc.cliente.getNome());
 		Ted.imprimirExtrato();
 		cc.imprimirExtrato();
-
 	}
-
+	//------------------------------------------------//
 }
